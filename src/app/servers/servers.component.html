@@ -7,7 +7,7 @@ class="form-control"
 type="text" 
 class="form-control"
 [(ngModel)]="serverName">
-<p>{{serverName}}</p>
+<!-- <p>{{serverName}}</p> -->
 <button class="btn btn-primary" [disabled]="!allownewServer"
 (click)="onCreateSever()"
 >Add Server</button>
@@ -15,3 +15,13 @@ class="form-control"
 <p>{{servreCreationStatus}}</p>
 <app-server></app-server>
 <app-server></app-server>
+
+<label> username</label>
+<input type ='text' calass = form-control
+[(ngModel)] ="username">
+<p> {{username}}</p>
+
+<button class="btn btn-primary"
+[disabled]="!onUserNAmeUpdate" 
+(click)="onAdduserButton()"
+>Add User</button>
