@@ -10,18 +10,10 @@ class="form-control"
 <!-- <p>{{serverName}}</p> -->
 <button class="btn btn-primary" [disabled]="!allownewServer"
 (click)="onCreateSever()"
+
 >Add Server</button>
 <!--<p [innerText]="allownewServer"></p>-->
-<p>{{servreCreationStatus}}</p>
+<!-- <p>{{servreCreationStatus}}</p> -->
+ <p *ngIf="serverCreated">server was created, server name is {{serverName}}</p>
 <app-server></app-server>
 <app-server></app-server>
-
-<label> username</label>
-<input type ='text' calass = form-control
-[(ngModel)] ="username">
-<p> {{username}}</p>
-
-<button class="btn btn-primary"
-[disabled]="!onUserNAmeUpdate" 
-(click)="onAdduserButton()"
->Add User</button>
